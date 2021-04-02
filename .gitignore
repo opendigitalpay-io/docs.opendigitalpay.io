@@ -1,0 +1,13 @@
+/deps
+/docs/.vuepress/dist
+/node_modules
+
+# External repos
+/docs/BTCPayServer
+/docs/Configurator
+/docs/Transmuter
+/docs/Docker
+/docs/.vuepress/public/API/Greenfield/**/*.json
+
+# Constructed docs
+/docs/LocalDevelopment.md

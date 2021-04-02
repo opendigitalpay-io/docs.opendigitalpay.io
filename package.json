@@ -1,0 +1,46 @@
+{
+  "name": "btcpayserver-docs",
+  "version": "1.0.0",
+  "description": "BTCPay Server Official Documentation",
+  "author": "BTCPay Server",
+  "license": "MIT",
+  "bugs": "https://github.com/btcpayserver/btcpayserver-doc/issues",
+  "homepage": "https://github.com/btcpayserver/btcpayserver-doc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btcpayserver/btcpayserver-doc.git"
+  },
+  "keywords": [
+    "btcpayserver"
+  ],
+  "config": {
+    "dist": "docs/.vuepress/dist",
+    "port": "8080",
+    "linkcheck": "blc -ro --filter-level 2 --requests 1 --exclude edit/master --exclude issues/new --exclude directory.btcpayserver.org --exclude foundation.btcpayserver.org --exclude install.btcpayserver.org --exclude bitma.tk --exclude cyberciti.biz --exclude drupal.org --exclude dyn.com --exclude facebook.com --exclude figma.com --exclude linkedin.com --exclude pi-hole.net --exclude reddit.com  --exclude t.me --exclude transifex.com --exclude twitter.com --exclude wiki.ion.radar.tech"
+  },
+  "scripts": {
+    "prestart": "rm -rf $npm_package_config_dist",
+    "start": "NODE_ENV=development vuepress dev docs -p $npm_package_config_port",
+    "build": "NODE_ENV=production vuepress build docs",
+    "test": "jest",
+    "linkcheck": "start-server-and-test linkcheck:serve $npm_package_config_port linkcheck:local",
+    "linkcheck:serve": "serve -p $npm_package_config_port $npm_package_config_dist",
+    "linkcheck:local": "$npm_package_config_linkcheck http://localhost:$npm_package_config_port",
+    "linkcheck:prod": "$npm_package_config_linkcheck https://docs.btcpayserver.org",
+    "predeploy": "./prepare-deployment.sh"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "1.8.2",
+    "@vuepress/plugin-medium-zoom": "1.8.2",
+    "broken-link-checker": "0.7.8",
+    "jest": "26.6.3",
+    "markdown-it-implicit-figures": "0.10.0",
+    "serve": "11.3.2",
+    "start-server-and-test": "1.12.1",
+    "vuepress": "1.8.2",
+    "vuepress-plugin-clean-urls": "1.1.2",
+    "vuepress-plugin-code-copy": "1.0.6",
+    "vuepress-plugin-seo": "0.1.4",
+    "vuepress-plugin-sitemap": "2.3.1"
+  }
+}

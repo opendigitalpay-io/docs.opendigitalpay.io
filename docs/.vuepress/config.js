@@ -3,12 +3,12 @@ const implicitFigures = require('markdown-it-implicit-figures')
 const slugify = require('./slugify')
 const preprocessMarkdown = resolve(__dirname, 'preprocessMarkdown')
 
-const title = 'BTCPay Server Docs'
-const baseUrl = 'https://docs.btcpayserver.org'
+const title = 'OpenDigitalPay Docs'
+const baseUrl = 'https://docs.opendigitalpay.io'
 const pageSuffix = '/'
 const info = {
   name: title,
-  twitter: 'btcpayserver'
+  twitter: 'opendigitalpay'
 }
 const extractDescription = text => {
   if (!text) return
@@ -18,7 +18,7 @@ const extractDescription = text => {
 
 module.exports = {
   title,
-  description: "BTCPay Server Official Documentation",
+  description: "OpenDigitalPay Official Documentation",
   head: [
     ["link", { rel: "stylesheet", href: "/styles/btcpayserver-variables.css" }]
   ],
@@ -112,53 +112,34 @@ module.exports = {
     sidebar: [
       ["/", "Introduction"],
       {
-        title: "Basics",
+        title: "System Design",
         collapsable: false,
         children: [
-          ["/UseCase", "Use Case"],
-          ["/Walkthrough", "Walkthrough"],
-          ["/TryItOut", "Try it out"]
+          ["/Architecture", "Architecture"],
+          ["/PaymentEngine", "Payment Engine"]
         ]
       },
       {
-        title: "Deployment",
+        title: "How to Start",
         collapsable: false,
         children: [
-          {
-            title: "Docker",
-            path: "/Docker/",
-            collapsable: false,
-            children: [
-              {
-                title: "K8S Deployment",
-                path: "/AzureDeployment",
-              }
-            ]
-          }
+          ["/DemoApp", "Demo App"],
+          ["/LocalDev", "Local Development"],
         ]
       },
       {
         title: "Features",
         collapsable: false,
         children: [
-          ["/Apps", "Apps"],
-          ["/Wallet", "Wallet"],
-          ["/Invoices", "Invoices"],
+          ["/Topup", "Topup"],
+          ["/Payment", "Payment"],
+          ["/Refund", "Refund"],
+          ["/Payout", "Payout"],
           {
             title: "Pull Payments",
                 path: "/PullPayments",
                 children: [
                   ["/Refund", "Refunds"]
-            ]
-          },
-          ["/PaymentRequests", "Payment Requests"],
-          ["/LightningNetwork", "Lightning Network"],
-          ["/Accounting", "Accounting"],
-          {
-            title: "Payjoin",
-            path: "/Payjoin",
-            children: [
-              ["https://github.com/bitcoin/bips/blob/master/bip-0078.mediawiki", "Payjoin specification", { type: 'external' }]
             ]
           }
         ]
@@ -175,10 +156,9 @@ module.exports = {
               ["/FAQ/FAQ-General", "General FAQ"],
             ]
           },
-          ["/Troubleshooting", "Troubleshooting an issue"],
           ["/Support", "Support"],
           {
-            title: "Contribute to BTCPay Server",
+            title: "Contribute to OpenDigitalPay",
             path: "/Contribute",
             children: [
               {
@@ -199,19 +179,10 @@ module.exports = {
                  ]
               },
               ["/Contribute/ContributeDesign", "Design"],
-              ["/Contribute/ContributeTranslate", "Translate"],
               ["/Contribute/ContributeMisc", "Miscellaneous"],
             ]
           },
           ["/Community", "Community"]
-        ]
-      },
-      {
-        title: "Development",
-        collapsable: false,
-        children: [
-          ["/Architecture", "Architecture"],
-          ["/LocalDevelopment", "Developing Locally"],
         ]
       }
     ]

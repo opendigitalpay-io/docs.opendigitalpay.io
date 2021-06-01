@@ -93,22 +93,3 @@ for file in "$DOCS_DIR"/Docker/*.md; do
   update_external "$file" https://github.com/btcpayserver/btcpayserver-docker "$DOCS_DIR"/Docker/
 done
 
-# Transmuter
-
-echo "Setup dependency: Transmuter"
-
-rm -rf "$DOCS_DIR/Transmuter"
-mkdir -p "$DOCS_DIR/Transmuter"
-
-if [ ! -d "$TRANSMUTER_DIR" ]; then
-  git clone https://github.com/btcpayserver/btcTransmuter.git "$TRANSMUTER_DIR"
-else
-  cd "$TRANSMUTER_DIR" && git checkout master && git pull
-fi
-
-cd "$TRANSMUTER_DIR"
-cp -r README.md docs/* "$DOCS_DIR/Transmuter"
-sed -ie 's$(docs/$(./$g' "$DOCS_DIR/Transmuter/README.md"
-for file in "$DOCS_DIR"/Transmuter/*.md; do
-  update_external "$file" https://github.com/btcpayserver/btcTransmuter "$DOCS_DIR"/Transmuter/
-done

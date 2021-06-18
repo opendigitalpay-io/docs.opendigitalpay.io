@@ -143,47 +143,6 @@ module.exports = {
             ]
           }
         ]
-      },
-      {
-        title: "Support and Community",
-        collapsable: false,
-        initialOpenGroupIndex: -1,
-        children: [
-          {
-            title: "FAQ and common issues",
-            path: "/FAQ",
-            children: [
-              ["/FAQ/FAQ-General", "General FAQ"],
-            ]
-          },
-          ["/Support", "Support"],
-          {
-            title: "Contribute to OpenDigitalPay",
-            path: "/Contribute",
-            children: [
-              {
-                title: "Develop",
-                path: "/Contribute/ContributeDev/",
-                 children: [
-                   ["/Contribute/ContributeDev/ContributeDevCode", "Code"],
-                   ["/Contribute/ContributeDev/ContributeDevTest", "Test"]
-                 ]
-              },
-              {
-                title: "Write",
-                path: "/Contribute/ContributeWrite/",
-                 children: [
-                   ["/Contribute/ContributeWrite/WriteSoftware", "Software Stack"],
-                   ["/Contribute/ContributeWrite/WriteDocs", "Documentation"],
-                   ["/Contribute/ContributeWrite/WriteBlog", "Blog"]
-                 ]
-              },
-              ["/Contribute/ContributeDesign", "Design"],
-              ["/Contribute/ContributeMisc", "Miscellaneous"],
-            ]
-          },
-          ["/Community", "Community"]
-        ]
       }
     ]
   }

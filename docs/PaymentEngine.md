@@ -21,7 +21,7 @@ pls refer here for API docs
 
 ## open-pay
 
-On top of open-balance service, Open-pay interact with third party financial instructions (e.g. banks, stripe) to process the payment transactions seen by users. 
+On top of open-balance service, Open-pay interacts with third party financial instructions (e.g. banks, stripe) to process the payment transactions seen by users. 
 
 The following diagram descibe the interactions between open-pay, open-balance and third party financial instructions.
 

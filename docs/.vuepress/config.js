@@ -67,7 +67,6 @@ module.exports = {
   },
   themeConfig: {
     domain: baseUrl,
-    logo: "/img/btcpay-logo.svg",
     displayAllHeaders: false,
     repo: "btcpayserver/btcpayserver-doc",
     docsDir: "docs",
@@ -90,23 +89,13 @@ module.exports = {
     nav: [
       {
         text: "Website",
-        link: "https://btcpayserver.org/",
+        link: "https://opendigitalpay-io.github.io/",
         rel: "noopener noreferrer website"
       },
       {
-        text: "Chat",
-        link: "https://chat.btcpayserver.org/",
-        rel: "noopener noreferrer chat"
-      },
-      {
         text: "GitHub",
-        link: "https://github.com/btcpayserver/",
+        link: "https://github.com/opendigitalpay-io/",
         rel: "noopener noreferrer github"
-      },
-      {
-        text: "Twitter",
-        link: "https://twitter.com/BtcpayServer",
-        rel: "noopener noreferrer twitter"
       }
     ],
     sidebar: [

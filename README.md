@@ -42,3 +42,6 @@ npm install
 # Serve locally (by default on port 8080)
 npm start
 ```
+# run npm in background
+pm2 --name docs-app start npm -- start
+```

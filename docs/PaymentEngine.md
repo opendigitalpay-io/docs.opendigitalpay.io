@@ -10,12 +10,11 @@ The payment engine contains two services:
 
 Open-balance servers the fundation of the whole payment system. It manages the balance accounts of users and merchants. And it also has a ledger component to keep track all money movements between accounts.
 
-more one balance use case.
-
 The key functions are:
 * create user/merchant balance accounts
 * get account list
-* ...
+* top up money to balance account
+* pay using balance account
 
 pls refer here for API docs
 
@@ -25,14 +24,11 @@ On top of open-balance service, Open-pay interacts with third party financial in
 
 The following diagram descibe the interactions between open-pay, open-balance and third party financial instructions.
 
-THe key functions provides by open-pays are:
-* pay
+The key functions provides by open-pays are:
+* Topup money from bank account to user's balance account
+* pay (using balance account or credit card)
 * refund
-* payout
+* payout to merchant
 * etc.
 
 pls refer here for API docs.
-
-Sequence diagrmas?
-*pay using balance or credit card
-*add money from bank account/creditcard
